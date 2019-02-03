@@ -1,0 +1,125 @@
+<!--
+   Copyright 2018 Google LLC.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainactivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="20dp"
+        android:background="@android:drawable/ic_dialog_info" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/ux_fragment"
+            android:name="com.google.ar.sceneform.ux.ArFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/opencvcamera_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></org.opencv.android.JavaCameraView>
+
+        <LinearLayout
+            android:id="@+id/marker_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="Scanning Marker"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--<LinearLayout-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:orientation="horizontal">-->
+
+      <!--<TextView-->
+          <!--android:id="@+id/Position"-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_weight="1"-->
+          <!--android:text="X"-->
+          <!--android:textColor="@android:color/holo_red_dark"-->
+          <!--android:textSize="24sp"-->
+          <!--android:textStyle="bold"-->
+          <!--app:layout_anchor="@+id/include"-->
+          <!--app:layout_anchorGravity="left|top" />-->
+
+  <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/LinearLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:foregroundGravity="bottom"-->
+        <!--android:gravity="bottom"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnLayPath"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="layPath"-->
+            <!--android:text="Lay Path" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnLoadPath"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="loadPath"-->
+            <!--android:text="Load Path" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnClearPath"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="clearPath"-->
+            <!--android:text="Clear Path" />-->
+    <!--</LinearLayout>-->
+
+</FrameLayout>
