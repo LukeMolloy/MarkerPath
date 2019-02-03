@@ -85,7 +85,6 @@ public class mainactivity extends AppCompatActivity {
   float[] averageQuaternion = new float[4];
   boolean augmentedImageFound = true;
   boolean laypath = false;
-//  Button btnLayPath;
   Dictionary dictionary;
   AugmentedImageDatabase imageDatabase;
 
